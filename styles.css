@@ -1,0 +1,38 @@
+.carousel img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: #2a2a2a;
+}
+
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+/* Make the active navbar item bold and change its color to a more visible green */
+.navbar-nav .nav-item .nav-link.active {
+    font-weight: bold;  /* Make the active link bold */
+    color: #7fbe61 !important;  /* Use Bootstrap's green color */
+}
+
+/* Optional: Change color when hovered (for all navbar items) */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #a0ca8d !important;  /* Change the color when hovered */
+}
+/* Define a CSS variable for the height of the top-section */
+:root {
+    --top-section-height: 100vh;  /* Change the height to 100% of the viewport */
+}
+
+video {
+    width: 50%;
+    height: auto;
+}
