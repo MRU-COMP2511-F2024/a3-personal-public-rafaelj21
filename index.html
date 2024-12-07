@@ -81,16 +81,6 @@
             margin-top: 40px;
         }
 
-        .social-media a {
-            font-size: 2rem;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .social-media a:hover {
-            color: #007bff;
-        }
-
         /* Contact Information Section */
         .contact-info {
             background-color: #f8f9fa;
@@ -101,15 +91,10 @@
             align-items: center; /* Center the content */
             justify-content: center; /* Ensure the content is vertically centered */
         }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
         .contact-info p {
             font-size: 1.2rem;
             margin-bottom: 5px;
+            margin-top: 0px;
         }
     </style>
 </head>
@@ -126,6 +111,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutMe.html">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Contact.html">Contact</a>
@@ -151,29 +139,16 @@
     <div class="top-section">
         <h1>Rafael Jimenez <br> ePortfolio</h1>
     </div>
-
-    <!-- Video and Text Section -->
-    <div class="content-container">
-        <!-- Video Section -->
-        <div class="video-container">
-            <video controls>
-                <source src="images/FIFA 23 2023-08-17 23-32-51.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <!-- Text Section -->
-        <div class="text-container">
-            <h2>About me</h2>
-            <p>Hi, I'm Rafael Jimenez, a passionate developer with experience in various web technologies. I specialize in creating dynamic and responsive web applications. Feel free to explore my projects and get in touch if you'd like to collaborate!</p>
-        </div>
-    </div>
-
     <!-- Social Media Section -->
     <div class="social-media">
-        <a href="https://www.linkedin.com/in/rafael-jimenez-57ab33334/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/rafael_j21/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/rafael-jimenez-57ab33334/" target="_blank">
+        <img src="images/linkeding logo.png" alt="LinkedIn" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/rafael_j21/" target="_blank">
+        <img src="images/instagram-gris.png" alt="Instagram" class="social-icon">
+    </a>
     </div>
+
 
     <!-- Contact Information Section -->
     <div class="contact-info">
@@ -182,5 +157,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Rafael Jimenez. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

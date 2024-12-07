@@ -10,43 +10,166 @@
     <link href="styles.css" rel="stylesheet">
     
     <style>
-        
+        /* Define a CSS variable for the height of the top-section */
+        :root {
+            --top-section-height: 80vh;  /* Default height for the top section */
+        }
+
+        /* Section with background image */
+        .top-section {
+            background-image: url('images/IMG_1409.jpeg'); /* Replace with your desired image URL */
+            background-size: cover;  /* Ensure the image covers the whole section */
+            background-position: center;  /* Center the background image */
+            height: var(--top-section-height);  /* Use the variable for height */
+            color: white;  /* Make text white so it contrasts with the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Ensure text inside h1 is stacked vertically */
+        }
+
+        /* Optional: Add some text styling */
+        .top-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  /* Add shadow to text */
+        }
+
+        /* Flexbox container for video and text */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Video container */
+        .video-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        /* Text container */
+        .text-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Responsive video */
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Optional: Styling for text */
+        .text-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Social Media Section */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Contact Information Section */
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the content */
+            justify-content: center; /* Ensure the content is vertically centered */
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            margin-top: 0px;
+        }
     </style>
 </head>
 <body class="bg-light">
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <!-- Link "Rafael Jimenez" to the home page -->
-        <a class="navbar-brand" href="index.html">Rafael Jimenez</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="Contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="WebProjects.html">Web Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Programmingprojects.html">Programming Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Resume.html">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Otherwork.html">Other Course Work</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Rafael Jimenez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutMe.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebProjects.html">Web Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Programmingprojects.html">Programming Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Otherwork.html">Other Course Work</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Social Media Section -->
+    <div class="social-media">
+    <a href="https://www.linkedin.com/in/rafael-jimenez-57ab33334/" target="_blank">
+        <img src="images/linkeding logo.png" alt="LinkedIn" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/rafael_j21/" target="_blank">
+        <img src="images/instagram-gris.png" alt="Instagram" class="social-icon">
+    </a>
     </div>
-</nav>
+
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+        <p>Email: <a href="mailto:rafaelji1306@gmail.com">rafaelji1306@gmail.com</a></p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Rafael Jimenez. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
