@@ -60,6 +60,8 @@ html, body {
 
 .nav-link {
     font-size: 20px;
+    margin-left: 12px;  /* Add some space between each navbar item */
+    margin-right: 12px; /* Add some space between each navbar item */
 }
 
 /* Active navbar link styles */
@@ -72,6 +74,7 @@ html, body {
 .navbar-nav .nav-item .nav-link:hover {
     color: #a0ca8d !important; /* Change the color when hovered */
 }
+
 
 /* Video styles */
 video {
