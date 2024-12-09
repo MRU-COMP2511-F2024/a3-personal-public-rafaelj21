@@ -96,6 +96,60 @@
             margin-bottom: 5px;
             margin-top: 0px;
         }
+        
+        /* Contact form styling */
+        .formbold-main {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .formbold-form-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .formbold-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .formbold-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .formbold-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Adjust form inputs for mobile */
+        @media (max-width: 768px) {
+            .formbold-main {
+                padding: 20px;
+            }
+
+            .formbold-input, .formbold-btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -135,154 +189,69 @@
         </div>
     </nav>
 
-
-
-
-
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Form</title>
-        <style>
-            
-            .formbold-main {
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #f9f9f9;
-                border-radius: 8px;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            }
-            .formbold-form-title {
-                font-size: 24px;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-            .formbold-input {
-                width: 100%;
-                padding: 10px;
-                margin: 10px 0;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
-            }
-            .formbold-btn {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 4px;
-            }
-            .formbold-btn:hover {
-                background-color: #45a049;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="formbold-main">
-            <h2 class="formbold-form-title">Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" name="firstname" placeholder="First Name" class="formbold-input" required>
-                <input type="text" name="lastname" placeholder="Last Name" class="formbold-input" required>
-                <input type="email" name="email" placeholder="Your Email" class="formbold-input" required>
-                <textarea name="message" placeholder="Your Message" class="formbold-input" rows="4" required></textarea>
-                <button type="submit" class="formbold-btn">Send Message</button>
-            </form>
-        </div>
-    
-        <!-- EmailJS SDK -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            (function(){
-                emailjs.init("Ibf8dH_rj4TyGGK80"); 
-            })();
-    
-            document.getElementById("contact-form").addEventListener("submit", function(event){
-                event.preventDefault();
-    
-                
-                emailjs.sendForm("Gmail", "template_6qi89fv", this)
-                    .then(function(response) {
-                        console.log("Email sent successfully: ", response);
-                        alert("Your message has been sent!");
-                    }, function(error) {
-                        console.log("Error sending email: ", error);
-                        alert("Failed to send message. Please try again.");
-                    });
-            });
-        </script>
-    </body>
-    </html>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <!-- Social Media Section -->
-    <div class="social-media">
-    <a href="https://www.linkedin.com/in/rafael-jimenez-57ab33334/" target="_blank">
-        <img src="images/linkeding logo.png" alt="LinkedIn" class="social-icon">
-    </a>
-    <a href="https://www.instagram.com/rafael_j21/" target="_blank">
-        <img src="images/instagram-gris.png" alt="Instagram" class="social-icon">
-    </a>
+    <!-- Contact Form -->
+    <div class="formbold-main">
+        <h2 class="formbold-form-title">Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="firstname" placeholder="First Name" class="formbold-input" required>
+            <input type="text" name="lastname" placeholder="Last Name" class="formbold-input" required>
+            <input type="email" name="email" placeholder="Your Email" class="formbold-input" required>
+            <textarea name="message" placeholder="Your Message" class="formbold-input" rows="4" required></textarea>
+            <button type="submit" class="formbold-btn">Send Message</button>
+        </form>
     </div>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        (function(){
+            emailjs.init("Ibf8dH_rj4TyGGK80");  // Replace with your actual EmailJS user ID
+        })();
+    
+        // Handle form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault();
+    
+            // Send form data to EmailJS service using the template ID
+            emailjs.sendForm("service_z3zgcul", "template_8nzo9l6", this)  // Replace "gmail" and "template_6qi89fv" with your actual service and template IDs
+                .then(function(response) {
+                    console.log("Email sent successfully: ", response);
+                    alert("Your message has been sent successfully!");
+                }, function(error) {
+                    console.log("Error sending email: ", error);
+                    alert("Failed to send message. Please try again.");
+                    console.error("Error details: ", error);  // Log detailed error information
+                });
+        });
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        (function(){
+            emailjs.init("Ibf8dH_rj4TyGGK80");  // Replace with your actual EmailJS user ID
+        })();
+    
+        // Handle form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault();
+    
+            // Send form data to EmailJS service using the template ID
+            emailjs.sendForm("service_z3zgcul", "template_incd8dv", this)  // Replace "gmail" and "template_6qi89fv" with your actual service and template IDs
+        });
+    </script>
+
+    <!-- Social Media Section -->
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/rafael-jimenez-57ab33334/" target="_blank">
+            <img src="images/linkeding logo.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/rafael_j21/" target="_blank">
+            <img src="images/instagram-gris.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
 
     <!-- Contact Information Section -->
     <div class="contact-info">
