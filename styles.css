@@ -1,13 +1,11 @@
-/* Apply the background color to the entire page */
 html, body {
-    background-color: var(--page-bg-color) !important; /* Force the background color */
+    background-color: var(--page-bg-color) !important;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
 }
 
-/* Top section styles */
 .top-section {
     background-image: url('images/IMG_1409.jpeg');
     background-size: cover;
@@ -19,14 +17,12 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    background-repeat: no-repeat; /* Prevent image repetition */
+    background-repeat: no-repeat;
 }
 
-
-/* Use different images for the top section based on screen size */
 @media (max-width: 576px) {
     .top-section {
-        background-image: url('images/IMG_1409.jpeg'); /* Small image for mobile */
+        background-image: url('images/IMG_1409.jpeg');
         background-size: cover;
         background-position: center;
     }
@@ -34,7 +30,7 @@ html, body {
 
 @media (min-width: 577px) and (max-width: 1200px) {
     .top-section {
-        background-image: url('images/IMG_1409.jpeg'); /* Medium image for tablets */
+        background-image: url('images/IMG_1409.jpeg');
         background-size: cover;
         background-position: center;
     }
@@ -42,13 +38,12 @@ html, body {
 
 @media (min-width: 1201px) {
     .top-section {
-        background-image: url('images/IMG_1409.jpeg'); /* Large image for desktops */
+        background-image: url('images/IMG_1409.jpeg');
         background-size: cover;
         background-position: center;
     }
 }
 
-/* Navbar styles */
 .navbar {
     background-color: #2a2a2a;
 }
@@ -60,35 +55,30 @@ html, body {
 
 .nav-link {
     font-size: 20px;
-    margin-left: 12px;  /* Add some space between each navbar item */
-    margin-right: 12px; /* Add some space between each navbar item */
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
-/* Active navbar link styles */
 .navbar-nav .nav-item .nav-link.active {
-    font-weight: bold; /* Make the active link bold */
-    color: #7fbe61 !important; /* Use a green color */
+    font-weight: bold;
+    color: #7fbe61 !important;
 }
 
-/* Navbar hover effect */
 .navbar-nav .nav-item .nav-link:hover {
-    color: #a0ca8d !important; /* Change the color when hovered */
+    color: #a0ca8d !important;
 }
 
-
-/* Video styles */
 video {
     width: 50%;
     height: auto;
 }
 
-/* Carousel image styles */
 .carousel img {
     width: 100%;
     height: 60vh;
     object-fit: cover;
 }
-/* Social Media Section */
+
 .social-media {
     display: flex;
     justify-content: center;
@@ -97,65 +87,89 @@ video {
 }
 
 .social-icon {
-    width: 50px; /* Set the size of the icons */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Make the icon slightly bigger on hover */
+    transform: scale(1.2);
 }
 
-/* Optional: Add a custom color filter on hover */
 .social-icon:hover {
-    filter: brightness(1.2); /* Brighten the icon when hovered */
+    filter: brightness(1.2);
 }
-/* Ensure images are responsive by default */
+
 .resize-img {
-    width: 100%; /* Scales to fit the container */
-    max-width: 500px; /* Sets a maximum width to prevent excessive scaling */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
-/* Add optional hover effect for interactivity */
 .resize-img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
 .btn-primary {
-    background-color: #5fa53f !important; /* Button background color */
-    border-color: #5fa53f !important; /* Border color */
+    background-color: #5fa53f !important;
+    border-color: #5fa53f !important;
 }
 
 .btn-primary:hover {
-    background-color: #4a8432 !important; /* Slightly darker color for hover effect */
+    background-color: #4a8432 !important;
     border-color: #4a8432 !important;
 }
+
 .contact-info a {
-    color: #5fa53f; /* Link color */
-    text-decoration: none; /* Removes underline */
+    color: #5fa53f;
+    text-decoration: none;
 }
 
 .contact-info a:hover {
-    color: #4a8432; /* Darker green for hover effect */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #4a8432;
+    text-decoration: underline;
 }
+
 .resume-link {
-    color: #5fa53f; /* Link color */
-    text-decoration: none; /* Removes underline */
+    color: #5fa53f;
+    text-decoration: none;
 }
 
 .resume-link:hover {
-    color: #4a8432; /* Darker green for hover effect */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #4a8432;
+    text-decoration: underline;
 }
+
 .resume-text {
     text-align: center;
-    font-size: 20px; /* Default font size */
+    font-size: 20px;
 }
 
 .resume-link {
-    font-size: 20px; /* Link font size */
-    color: #5fa53f; /* Link color */
+    font-size: 20px;
+    color: #5fa53f;
     text-decoration: none;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
