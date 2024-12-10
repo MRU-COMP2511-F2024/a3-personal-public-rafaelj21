@@ -122,3 +122,40 @@ video {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
     transition: transform 0.3s ease-in-out;
 }
+.btn-primary {
+    background-color: #5fa53f !important; /* Button background color */
+    border-color: #5fa53f !important; /* Border color */
+}
+
+.btn-primary:hover {
+    background-color: #4a8432 !important; /* Slightly darker color for hover effect */
+    border-color: #4a8432 !important;
+}
+.contact-info a {
+    color: #5fa53f; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.contact-info a:hover {
+    color: #4a8432; /* Darker green for hover effect */
+    text-decoration: underline; /* Adds underline on hover */
+}
+.resume-link {
+    color: #5fa53f; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.resume-link:hover {
+    color: #4a8432; /* Darker green for hover effect */
+    text-decoration: underline; /* Adds underline on hover */
+}
+.resume-text {
+    text-align: center;
+    font-size: 20px; /* Default font size */
+}
+
+.resume-link {
+    font-size: 20px; /* Link font size */
+    color: #5fa53f; /* Link color */
+    text-decoration: none;
+}
