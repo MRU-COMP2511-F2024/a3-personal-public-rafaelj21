@@ -173,3 +173,16 @@ video {
     max-width: 600px;
     height: auto;
 }
+.social-icon {
+    width: 40px; /* Adjust as needed */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+.resize-img {
+    max-width: 100%;
+    height: auto;
+}
