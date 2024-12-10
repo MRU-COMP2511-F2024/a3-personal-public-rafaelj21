@@ -110,3 +110,15 @@ video {
 .social-icon:hover {
     filter: brightness(1.2); /* Brighten the icon when hovered */
 }
+/* Ensure images are responsive by default */
+.resize-img {
+    width: 100%; /* Scales to fit the container */
+    max-width: 500px; /* Sets a maximum width to prevent excessive scaling */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Add optional hover effect for interactivity */
+.resize-img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transition: transform 0.3s ease-in-out;
+}
